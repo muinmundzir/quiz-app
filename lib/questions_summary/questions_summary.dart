@@ -9,20 +9,15 @@ class QuestionsSummary extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Padding(
-      padding: const EdgeInsets.symmetric(
-        vertical: 20,
-      ),
-      child: SizedBox(
-        height: 400,
-        child: SingleChildScrollView(
-          child: Column(
-            children: summaryData.map(
-              (data) {
-                return SummaryItem(data);
-              },
-            ).toList(),
-          ),
+    return SizedBox(
+      height: 400,
+      child: SingleChildScrollView(
+        child: Column(
+          children: summaryData.map(
+            (data) {
+              return SummaryItem(data);
+            },
+          ).toList(),
         ),
       ),
     );
